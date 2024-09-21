@@ -1,0 +1,11 @@
+Dossier de rendu : ex00/
+Fichiers à rendre : ft_putchar.c
+Fonctions autorisées : write
+
+-----------------------------------
+
+Écrire une fonction aui affiche le caractere passé en parametre
+
+Elle devra etre prototypée de la facon suivante :
+
+void	ft_putchar(char c);

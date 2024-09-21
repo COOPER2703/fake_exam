@@ -1,0 +1,12 @@
+Dossier de rendu : ex01/
+Fichiers à rendre : ft_div_mod.c
+Fonctions autorisées : Aucune
+
+-----------------------------------
+
+Écrire une fonction ft_div_mod qui à le prototypage suivant
+
+void	ft_div_mod(int a, int b, int *div, int *mod);
+
+Cette fonction divise les deux parametres a et b et stocke le resultat dans l'int pointé par div
+Elle stocke également le reste de la division de a et b dans l'int pointé par mod.

@@ -1,0 +1,14 @@
+Dossier de rendu : ex02/
+Fichiers à rendre : count_words.c
+Fonctions autorisées : Aucune
+
+-----------------------------------
+
+Écrire une fonction qui compte le nombre de mots présents dans un string.
+
+Un mot est defini comme une chaine de caractere séparé par un nombre arbitraire 
+de 'white space' (comme défini par isspace(3)) ou par le début ou la fin de la chaine de caractere.
+
+Elle devra etre prototypée de la facon suivante :
+
+int	count_words(char *str);
