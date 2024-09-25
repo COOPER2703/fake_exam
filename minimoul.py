@@ -20,7 +20,11 @@ def do_execution(exec_path, args):
         return ("error", s.returncode)
 
 def do_test(file_name, main, test_list):
-    if not os.path.exists(get_executing_path() + file_name):
+    run_test = False
+    if len(sys.argv) == 2 and sys.argv[1] == 'run_test':
+        run_test = True
+
+    if not run_test and not os.path.exists(get_executing_path() + file_name):
         print(f"Erreur: '{file_name}' n'existe pas")
         return False
     temp_path = get_executing_path() + 'test/'
@@ -43,13 +47,13 @@ def do_test(file_name, main, test_list):
     if (os.system(comp.format(main_path if main != None else "", ref_file_path, ref_out_path))) != 0:
         print(f"Erreur: compilation du fichier de reference 'answer.c' echouee. Frappez la personne qui l'a ecrite")
         return False
-    if (os.system(comp.format(main_path if main != None else "", file_path, out_path))) != 0:
+    if (not run_test and os.system(comp.format(main_path if main != None else "", file_path, out_path))) != 0:
         print(f"Erreur: compilation de '{file_name}' echouee :(")
         return False
     
     print("Debut des tests...")
-	if args == None:
-		args = ['']
+    if test_list == None:
+        test_list = ['']
     for args in test_list:
         print(f"---- Test avec '{args}'... ", end='', flush=True)
         ref = do_execution(ref_out_path, args)
@@ -65,6 +69,10 @@ def do_test(file_name, main, test_list):
                     + "autorise a crier sur la personne qui l'a ecrite. Sortie:")
             print(ref[1])
             return False
+        if run_test:
+            print()
+            print(ref[1])
+            continue
         out = do_execution(out_path, args)
         if (out[0] == "error"):
             print("ERREUR\nVotre test a plante. Sortie:")
