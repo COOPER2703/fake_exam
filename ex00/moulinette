@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, "..")
+import minimoul
+
+main = """
+void	ft_putchar(char c);
+
+int main(int argc, char **argv)
+{
+    (void)argc;
+    ft_putchar(argv[1][0]);
+}
+"""
+
+test_list = [c for c in "abcdefghijklmnopqrstuvwxyz0123456789"]
+
+minimoul.do_test("ft_putchar.c", main, test_list)
