@@ -1,0 +1,7 @@
+Fichier a rendre: ft_alpha.c
+Fonction autorisee: write
+
+Ecrire un programme qui affiche l'alphabet dont une lettre sur deux est en majuscule, suivi d'un retour a la ligne
+Exemple:
+./a.out | cat -e
+aBcDeFgHiJkLmNoPqRsTuVwXyZ$

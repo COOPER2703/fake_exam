@@ -48,6 +48,8 @@ def do_test(file_name, main, test_list):
         return False
     
     print("Debut des tests...")
+	if args == None:
+		args = ['']
     for args in test_list:
         print(f"---- Test avec '{args}'... ", end='', flush=True)
         ref = do_execution(ref_out_path, args)
