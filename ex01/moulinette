@@ -3,26 +3,4 @@ import sys
 sys.path.insert(0, "..")
 import minimoul
 
-main = """
-#include <stdlib.h>
-#include <stdio.h>
-
-void	ft_div_mod(int a, int b, int *div, int *mod);
-
-int main(int argc, char **argv)
-{
-    (void)argc;
-    int a = atoi(argv[1]);
-    int b = atoi(argv[2]);
-    int div;
-    int mod;
-    ft_div_mod(a, b, &div, &mod);
-    printf("div:%d, mod:%d", div, mod);
-}
-"""
-
-from random import randint
-
-test_list = [str(randint(1, 50)) + " " + str(randint(1, 50)) for i in range(20)]
-
-minimoul.do_test("ft_div_mod.c", main, test_list)
+minimoul.do_test("ft_alpha.c", None, None)

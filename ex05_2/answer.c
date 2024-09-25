@@ -5,14 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:43 by tjouvenc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:30:42 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/25 18:20:07 by tjouvenc          #+#    #+#             */
+/*   Updated: 2024/09/25 18:38:52 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	unsigned int	i;
+
+	i = 1;
+	if (n == 0)
+		return (0);
+	while (*s1 == *s2 && *s1 && i < n)
+	{
+		s1++;
+		s2++;
+		i++;
+	}
+	return (*s1 - *s2);
 }

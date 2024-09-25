@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, "..")
+import minimoul
+
+main = """
+#include <stdlib.h>
+#include <stdio.h>
+
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
+
+int main(int argc, char **argv)
+{
+    (void)argc;
+    printf("%d", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
+}
+"""
+
+from random import randint, choice
+
+lst = ['"" ""', '"" "a"', '"toto" "toti"', '"aaa" ""', '"coucou" "couciu"']
+test_list = []
+for e in lst:
+	for i in range(len(e) // 2 + 2):
+		test_list.append(e + " " + str(i))
+
+minimoul.do_test("ft_strncmp.c", main, test_list)

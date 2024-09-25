@@ -1,0 +1,5 @@
+Fichier a rendre: ft_strncmp
+Aucune fonction autorisee
+
+Reproduire a l'exact le comportement de strncmp.
+char	*ft_strncmp(char *s1, char *s2);

@@ -1,0 +1,5 @@
+Fichier a rendre: ft_strcat
+Aucune fonction autorisee
+
+Reproduire a l'exact le comportement de strcat.
+char	*ft_strcat(char *dest, char *src);

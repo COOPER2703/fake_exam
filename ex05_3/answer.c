@@ -5,14 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:43 by tjouvenc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:30:42 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/06 12:19:16 by tjouvenc          #+#    #+#             */
+/*   Updated: 2024/09/25 18:46:24 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 {
-	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
 }

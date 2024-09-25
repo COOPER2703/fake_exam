@@ -1,4 +1,3 @@
-Dossier de rendu : ex02/
 Fichiers à rendre : count_words.c
 Fonctions autorisées : Aucune
 

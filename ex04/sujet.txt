@@ -1,0 +1,26 @@
+Fichier a rendre: ft_fizzbuzz.c
+Fonction autorisee: write
+
+Ecrire un programme qui ecrit tous les entiers de 1 a 100 (inclus) ou:
+	Si le nombre est un multiple de 3, ecrire fizz a la place
+	Si le nombre est un multiple de 5, ecrire buzz a la place
+	Si le nombre est un multiple de 3 et de 5, ecrire fizzbuzz a la place
+Dans tous les cas, ecrire un retour a la ligne
+
+Extrait de la ortie attendue:
+./a.out | cat -e
+1$
+2$
+fizz$
+4$
+buzz$
+6$
+...
+13$
+14$
+fizzbuzz$
+16$
+...
+98$
+fizz$
+buzz$

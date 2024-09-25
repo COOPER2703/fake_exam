@@ -5,14 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:43 by tjouvenc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:30:42 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/25 17:54:32 by tjouvenc          #+#    #+#             */
+/*   Updated: 2024/09/25 17:55:51 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+int	ft_count_d(char *str)
 {
-	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	int	count;
+	int	i;
+
+	count = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == 'd')
+			count++;
+		i++;
+	}
+	return (count);
 }

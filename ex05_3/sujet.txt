@@ -1,0 +1,5 @@
+Fichier a rendre: ft_strncpy
+Aucune fonction autorisee
+
+Reproduire a l'exact le comportement de strncpy.
+char	*ft_strncpy(char *dest, char *src);

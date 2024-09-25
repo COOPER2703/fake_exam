@@ -5,14 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:43 by tjouvenc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:30:42 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/25 18:20:07 by tjouvenc          #+#    #+#             */
+/*   Updated: 2024/09/25 18:26:47 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+char	*ft_strcat(char *dest, char *src)
 {
-	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (dest[i])
+		i++;
+	while (src[j])
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }

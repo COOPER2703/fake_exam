@@ -3,35 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   answer.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcochet <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/21 09:32:53 by jcochet           #+#    #+#             */
-/*   Updated: 2024/09/25 16:51:03 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/25 18:05:03 by tjouvenc          #+#    #+#             */
+/*   Updated: 2024/09/25 18:12:12 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	is_space(char c)
+#include <unistd.h>
+
+void ft_simple_putnbr(int nb)
 {
-	return (c == ' ' || (c >= '\t' && c <= '\r'));
+	// Ne fonctionne qu'avec des entiers a 1 ou 2 chiffres
+	// Un putnbr complet marche aussi mais prend plus de temps
+	char	c;
+
+	if (nb < 10)
+	{
+		c = '0' + nb;
+		write(1, &c, 1);
+	}
+	else if (nb < 100)
+	{
+		c = '0' + (nb / 10);
+		write(1, &c, 1);
+		c = '0' + (nb % 10);
+		write(1, &c, 1);
+	}
 }
 
-int	count_words(char *str)
+int main(void)
 {
-	int	count;
-	int	index;
+	int	i;
 
-	index = 0;
-	count = 0;
-	// Si la chaine est vide alors on retourne 0 mots
-	if (str[0] == '\0')
-		return (0);
-	while (str[index])
+	i = 1;
+	while (i <= 100)
 	{
-		//On peut mettre une condition sur plusieurs lignes si ca ne rentre pas
-		if (!is_space(str[index]) && (is_space(str[index + 1])
-				|| str[index + 1] == '\0'))
-			count++;
-		index++;
+		if (i % 3 == 0 && i % 5 == 0)
+			write(1, "fizzbuzz", 8);
+		else if (i % 3 == 0)
+			write(1, "fizz", 4);
+		else if (i % 5 == 0)
+			write(1, "buzz", 4);
+		else
+			ft_simple_putnbr(i);
+		write(1, "\n", 1);
+		i++;
 	}
-	return (count);
 }

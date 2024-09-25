@@ -59,7 +59,7 @@ def do_test(file_name, main, test_list):
         ref = do_execution(ref_out_path, args)
         if (ref[0] == "error"):
             print("OOPS\nLe programme de reference a plante. Ce n'est pas de votre faute. Vous etes legalement autorise a crier sur la personne qui l'a ecrite. Sortie:")
-            if ref[1] == 139:
+            if ref[1] == -11:
                 print("Segmentation fault")
             else:
                 print("Signal code:" + str(ref[1]))
@@ -93,5 +93,5 @@ def do_test(file_name, main, test_list):
             return False
         else:
             print("OK")
-    print("Tous les tests passes !!")
+    print("Tous les tests passent !!")
     return True

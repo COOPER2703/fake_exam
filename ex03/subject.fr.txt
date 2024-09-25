@@ -1,4 +1,3 @@
-Dossier de rendu : ex01/
 Fichiers à rendre : ft_div_mod.c
 Fonctions autorisées : Aucune
 

@@ -4,3 +4,5 @@ Cependant, on programme tous differemment donc ne paniquez pas si vous n'avez pa
 
 Dans chaque dossier vous trouverez un fichier nomme 'moulinette'. 
 C'est un script qui verifie que votre code fonctionne correctement et donne des bons resultats. Executez-le avec './moulinette' quand vous avez fini votre fonction et elle vous dit si votre code fonctionne. Pas besoin de faire un main ! (sauf si on vous demamde un programme evidemment)
+
+La norme n'a pas besoin d'etre respectee le jour de l'exam, elle n'est donc pas verifiee ici aussi

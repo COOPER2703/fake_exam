@@ -1,7 +1,6 @@
-Fichier a rendre: ft_alpha.c
-Fonction autorisee: write
+Fichier a rendre: "ft_count_d"
+Aucune fonction autorisee
 
-Ecrire un programme qui affiche l'alphabet dont une lettre sur deux est en majuscule, suivi d'un retour a la ligne
-Exemple:
-./a.out | cat -e
-aBcDeFgHiJkLmNoPqRsTuVwXyZ$
+Ecrire une fonction qui compte le nombre de caracteres 'd' dans une chaine de caractere
+Prototype:
+int	ft_count_d(char *str);

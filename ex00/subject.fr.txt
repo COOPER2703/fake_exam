@@ -1,4 +1,3 @@
-Dossier de rendu : ex00/
 Fichiers à rendre : ft_putchar.c
 Fonctions autorisées : write
 

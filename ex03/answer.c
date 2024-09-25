@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   answer.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jcochet <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 17:19:43 by tjouvenc          #+#    #+#             */
-/*   Updated: 2024/09/25 17:30:42 by tjouvenc         ###   ########.fr       */
+/*   Created: 2024/09/21 09:41:21 by jcochet           #+#    #+#             */
+/*   Updated: 2024/09/21 09:41:56 by jcochet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	main(void)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	write(1, "aBcDeFgHiJkLmNoPqRsTuVwXyZ\n", 27);
+	*div = a / b;
+	*mod = a % b;
 }

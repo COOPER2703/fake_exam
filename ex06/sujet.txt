@@ -1,0 +1,5 @@
+Fichier a rendre: ft_putnbr.c
+Fonction autorisee: write
+
+Ecrire une fonction ft_putnbr qui affiche un int passe en parametre. Prototype:
+void	ft_putnbr(int nbr);
