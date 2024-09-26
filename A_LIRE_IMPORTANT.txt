@@ -1,7 +1,3 @@
-Pour chaque exercice, il y a un fichier answer.c qui contient le code de reponse.
-
-Cependant, on programme tous differemment donc ne paniquez pas si vous n'avez pas exactement le meme code
-
 Dans chaque dossier vous trouverez un fichier nomme 'moulinette'. 
 C'est un script qui verifie que votre code fonctionne correctement et donne des bons resultats. Executez-le avec './moulinette' quand vous avez fini votre fonction et elle vous dit si votre code fonctionne. Pas besoin de faire un main ! (sauf si on vous demamde un programme evidemment)
 
