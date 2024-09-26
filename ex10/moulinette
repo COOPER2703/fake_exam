@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, "..")
+import minimoul
+
+main = """
+#include <stdlib.h>
+#include <stdio.h>
+
+char **ft_split(char *str, char *charset);
+
+int main(int argc, char **argv)
+{
+	int		i;
+	char	**res;
+
+    (void)argc;
+	i = 0;
+	res = ft_split(argv[1], argv[2]);
+	while (res[i] != 0)
+	{
+		printf("%s ", res[i]);
+		i++;
+	}
+	return (0);
+}
+"""
+
+from random import randint, choices
+
+alpha = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+test_list = ["".join(choices(alpha, k=randint(1, 20))) + " " + "".join(choices(alpha, k=randint(1, 20))) for i in range(20)]
+test_list.extend(['"" ""', '"" "test"', '"test" ""'])
+
+minimoul.do_test("ft_split.c", main, test_list)

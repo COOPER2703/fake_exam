@@ -1,0 +1,23 @@
+Dossier de rendu : ex10
+Fichiers à rendre : ft_split.c
+Fonctions autorisées : malloc
+
+-----------------------------------
+
+Écrire une fonction qui découpe une chaîne de caractères en fonction d’une autre
+chaîne de caractères.
+
+Il faudra utiliser chaque caractère de la chaine charset comme séparateur.
+
+La fonction renvoie un tableau où chaque case contient l’adresse d’une chaîne de
+caractères comprise entre deux séparateur. Le dernier élement du tableau devra
+être égal à 0 pour marquer la fin du tableau.
+
+Il ne doit pas y avoir de chaîne vide dans votre tableau. Tirez-en les conclusions
+qui s’imposent.
+
+La chaîne qui sera transmise ne sera pas modifiable.
+
+Elle devra être prototypée de la façon suivante :
+
+char	**ft_split(char *str, char *charset);
