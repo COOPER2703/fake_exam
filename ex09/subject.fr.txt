@@ -1,4 +1,3 @@
-Dossier de rendu : ex10
 Fichiers à rendre : ft_split.c
 Fonctions autorisées : malloc
 

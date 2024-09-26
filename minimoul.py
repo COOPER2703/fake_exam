@@ -33,7 +33,7 @@ def do_test(file_name, main, test_list):
     os.makedirs(temp_path)
 
     file_path = get_executing_path() + file_name
-    ref_file_path = get_executing_path() + "answer.c"
+    ref_file_path = get_executing_path() + "../.answerz/" + file_name
     out_path = temp_path + 'out'
     ref_out_path = temp_path + 'ref'
 
@@ -46,9 +46,11 @@ def do_test(file_name, main, test_list):
     print("Compilation...")
     if (os.system(comp.format(main_path if main != None else "", ref_file_path, ref_out_path))) != 0:
         print(f"Erreur: compilation du fichier de reference 'answer.c' echouee. Frappez la personne qui l'a ecrite")
+        shutil.rmtree(temp_path, ignore_errors=True)
         return False
     if (not run_test and os.system(comp.format(main_path if main != None else "", file_path, out_path))) != 0:
         print(f"Erreur: compilation de '{file_name}' echouee :(")
+        shutil.rmtree(temp_path, ignore_errors=True)
         return False
     
     print("Debut des tests...")
@@ -63,11 +65,13 @@ def do_test(file_name, main, test_list):
                 print("Segmentation fault")
             else:
                 print("Signal code:" + str(ref[1]))
+            shutil.rmtree(temp_path, ignore_errors=True)
             return False
         elif ref[0] == "timeout":
             print("OOPS\nLe programme de reference a mis trop de temps a s'executer. Ce n'est pas de votre faute. Vous etes legalement "
                     + "autorise a crier sur la personne qui l'a ecrite. Sortie:")
             print(ref[1])
+            shutil.rmtree(temp_path, ignore_errors=True)
             return False
         if run_test:
             print()
@@ -80,18 +84,23 @@ def do_test(file_name, main, test_list):
                 print("Segmentation fault")
             else:
                 print("Signal code:" + str(out[1]))
+            shutil.rmtree(temp_path, ignore_errors=True)
             return False
         elif out[0] == "timeout":
             print("ERREUR\nVotre test a mis trop de temps a s'executer. Cela est souvent du a une boucle infinie. Sortie:")
             print(out[1])
+            shutil.rmtree(temp_path, ignore_errors=True)
             return False
         if ref[1] != out[1]:
             print("DIFF KO\n. Votre test n'est pas passe. Sortie attendue:")
             print(ref[1])
             print("Votre sortie:")
             print(out[1])
+            shutil.rmtree(temp_path, ignore_errors=True)
             return False
         else:
             print("OK")
     print("Tous les tests passent !!")
+    shutil.rmtree(temp_path, ignore_errors=True)
+
     return True

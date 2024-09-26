@@ -1,0 +1,20 @@
+Fichier a rendre: ft_alter.c
+Fonction autorisee: write
+
+Ecrire un programme qui ecrit les arguments passes en entree, en alternant entre a l'endroit et a l'envers, chacun suivi d'un retour a la ligne (on ne prend pas en compte le nom du programme)
+
+Exemples:
+> ./a.out "bonjour" "banane" "bonsoir" | cat -e
+bonjour$
+enanab$
+bonsoir$
+> ./a.out "owo" "what's" "this" "??" | cat -e
+owo$
+s'tahw$
+this$
+> ./a.out | cat -e
+> ./a.out "je suis une tomate" "je suis un fromage" | cat -e
+je suis une tomate$
+egamorf nu sius ej$
+> ./a.out "" | cat -e
+$

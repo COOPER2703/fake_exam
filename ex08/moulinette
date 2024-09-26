@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+import sys
+sys.path.insert(0, "..")
+import minimoul
+
+main = """
+#include <stdlib.h>
+#include <stdio.h>
+
+int	count_words(char *str);
+
+int main(int argc, char **argv)
+{
+    (void)argc;
+    printf("%d", count_words(argv[1]));
+}
+"""
+
+from random import randint, choice
+
+alpha = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+test_list = []
+for i in range(30):
+	s = '"'
+	for j in range(randint(2, 12)):
+		for k in range(randint(0, 10)):
+			s += choice(alpha)
+		s += " "
+	test_list.append(s + '"')
+test_list += ['""', '"unmot"']
+
+
+minimoul.do_test("count_words.c", main, test_list)

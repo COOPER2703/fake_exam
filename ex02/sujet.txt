@@ -1,4 +1,4 @@
-Fichier a rendre: "ft_count_d"
+Fichier a rendre: ft_count_d.c
 Aucune fonction autorisee
 
 Ecrire une fonction qui compte le nombre de caracteres 'd' dans une chaine de caractere
