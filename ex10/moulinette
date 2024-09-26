@@ -29,7 +29,9 @@ int main(int argc, char **argv)
 from random import randint, choices
 
 alpha = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-test_list = ["".join(choices(alpha, k=randint(1, 20))) + " " + "".join(choices(alpha, k=randint(1, 20))) for i in range(20)]
+strs = ["".join(choices(alpha, k=randint(5, 25))) for i in range(20)]
+seps = ["".join(choices(strs[i], k=randint(1, 4))) for i in range(20)]
+test_list = [strs[i] + " " + seps[i] for i in range(20)]
 test_list.extend(['"" ""', '"" "test"', '"test" ""'])
 
 minimoul.do_test("ft_split.c", main, test_list)
